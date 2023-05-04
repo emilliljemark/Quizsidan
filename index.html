@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizsidan</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Link to dropdown icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Font related code -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Top bar -->
+    <div class="topBar">
+        <div class="title">Quizsidan</div>
+        <a href="javascript:void(0)" class="icon" onclick="drop()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+    <div id="dropContent">
+        <a href="index.html">Hem</a>
+        <a href="about.html">Om</a>
+    </div>
+
+    <!-- Selection of categories -->
+    <div class="bodyText alignedBodyText">
+        Välj kategorier...
+    </div>
+    <div class="bodyText alignedBodyText">
+        <input type="checkbox" class="checkBox" onclick="checkAll()">
+        Välj alla
+    </div>
+
+    <div class="categories">
+        <div class="category">
+            <label for="science" class="label">
+                <input type="checkbox" class="checked checkBox" id="science" name="science">
+                <img src="images/science.png" alt="E-kolv med vätska">
+                Vetenskap
+            </label>
+        </div>
+        <div class="category">
+            <label for="geography" class="label">
+                <input type="checkbox" class="checked checkBox" id="geography">
+                <img src="images/geography.png" alt="Jordklot">
+                Geografi
+            </label>
+        </div>
+        <div class="category">
+            <label for="civics" class="label">
+                <input type="checkbox" class="checked checkBox" id="civics">
+                <img src="images/civics.png" alt="Podium">
+                Samhälle
+            </label>
+        </div>
+        <div class="category">
+            <label for="sport" class="label">
+                <input type="checkbox" class="checked checkBox" id="sport">
+                <img src="images/sport.png" alt="Fotboll">
+                Sport
+            </label>
+        </div>
+    </div>
+
+    <!-- Number of questions -->
+    <div class="quantity">
+        Antal frågor:
+        <select id="numbers">
+            <option value="2">2</option>
+            <option value="4">4</option>
+            <option value="10">10</option>
+          </select>
+    </div>
+
+    <!-- Error message -->
+    <div id="error">Välj minst en kategori!</div>
+
+    <!-- Start game -->
+    <div class="buttonContainer">
+        <button id="startButton" onclick="getQuizInfo()">Starta Quiz</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

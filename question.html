@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizsidan</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font related code-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body onload="quizConstructor(), questionLoader()">
+
+    <div class="siteContainer">
+        <!-- Question bar -->
+        <div class="questionBar">
+            <div class="holder">
+                <div id="questionNum">Fråga 1:</div>
+                <div id="question">Vad heter Argentinas huvudstad?</div>
+            </div>
+            <img id="categoryImg" src="images/geography.png" alt="Jordklot">
+        </div>
+
+        <!-- Main image -->
+        <div class="questionImg">
+            <img id="questionImg" src="images/buenos.jpg" alt="question image">
+        </div>
+
+        <!-- Answer options -->
+        <form class="alternatives">
+            <div>
+                <input class="radio" type="radio" id="1" name="alt">
+                <label id="answer1" for="1">Oslo</label>
+            </div>
+            <div>
+                <input class="radio" type="radio" id="2" name="alt">
+                <label id="answer2" for="2">Lima</label>
+            </div>
+            <div>
+                <input class="radio" type="radio" id="3" name="alt">
+                <label id="answer3" for="3">Buenos Aires</label>
+            </div>
+            <div>
+                <input class="radio" type="radio" id="4" name="alt">
+                <label id="answer4" for="4">Stockholm</label>
+            </div>
+        </form>
+
+        <!-- Error message -->
+        <div id="error">Välj ett svarsalternativ för att gå vidare</div>
+
+        <!-- Countinue button -->
+        <button class="roundButton" id="right" onclick="correct()">&#8594;</button>
+
+        <!-- Exit game -->
+        <button class="roundButton" id="left" onclick="this.disabled=true; window.location.href='index.html';">x</button>
+
+        <script src="script.js"></script>
+    </div>
+</body>
+</html>

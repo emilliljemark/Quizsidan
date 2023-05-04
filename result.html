@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizsidan</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font related code-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body onload="showResults()">
+    <!-- Navbar -->
+    <div class="topBar">
+        <div class="title">Quizsidan</div>
+    </div>
+
+    <!-- Result -->
+    <div class="bigText">Bra jobbat!</div>
+    <div class="bigText">Du hade</div>
+    <div id="result">9/10 rätt</div>
+
+    <!-- Tested categories -->
+    <div class="bodyText" id="centeredBody">Testade kategorier:</div>
+    <div class="testedCategories">
+        <img src="images/science.png" class="testedCat" alt="Vetenskap" id="science">
+        <img src="images/geography.png" class="testedCat" alt="Geografi" id="geography">
+        <img src="images/civics.png" class="testedCat" alt="Samhälle" id="civics">
+        <img src="images/sport.png" class="testedCat" alt="Sport" id="sport">
+    </div>
+
+    <!-- Continue button -->
+    <button class="roundButton" id="right" onclick="window.location.href='index.html';">&#8594;</button>
+    <script src="script.js"></script>
+</body>
+</html>
