@@ -49,6 +49,10 @@ function checkAll() {
         boxes.forEach(box => {
             box.checked = false;
         })
+        document.getElementById("all").checked = false;
+    }
+    else {
+        document.getElementById("all").checked = true;
     }
 }
 
