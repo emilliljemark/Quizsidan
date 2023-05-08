@@ -38,10 +38,18 @@ var correctCount = 0;
 // Selects all categories
 function checkAll() {
     boxes = document.querySelectorAll(".checked");
+    var allSelected = true;
     boxes.forEach(box => {
+        if (box.checked == false) {
+            allSelected = false
+        }
         box.checked = true;
+    })
+    if (allSelected) {
+        boxes.forEach(box => {
+            box.checked = false;
+        })
     }
-    )
 }
 
 
