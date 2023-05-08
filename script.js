@@ -39,12 +39,7 @@ var correctCount = 0;
 function checkAll() {
     boxes = document.querySelectorAll(".checked");
     boxes.forEach(box => {
-        if (box.checked == false) {
-            box.checked = true;
-        }
-        else {
-            box.checked = false
-        }
+        box.checked = true;
     }
     )
 }
